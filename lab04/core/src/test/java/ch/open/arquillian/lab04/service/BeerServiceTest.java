@@ -12,12 +12,14 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import ch.open.arquillian.lab04.domain.Beer;
 import ch.open.arquillian.lab04.repository.BeerRepository;
 
+@Ignore
 @RunWith(Arquillian.class)
 public class BeerServiceTest
 {
@@ -28,7 +30,6 @@ public class BeerServiceTest
                        .addPackages(true, Beer.class.getPackage(), BeerRepository.class.getPackage())
                        .addClass(BeerService.class)
                        .addPackages(true, "org.fest")
-                       .addPackages(true, "com.google.common.base")
                        .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
                        .addAsManifestResource("test-persistence.xml", "persistence.xml");
    }

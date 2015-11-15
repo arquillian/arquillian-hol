@@ -55,13 +55,6 @@ public class BeerAdvisorDroneTest
    @Drone
    WebDriver driver;
 
-   @Before
-   public void setup()
-   {
-      // make the driver more patient for our VM environments :)
-      driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-   }
-
    @Test
    public void should_find_all_beers()
    {

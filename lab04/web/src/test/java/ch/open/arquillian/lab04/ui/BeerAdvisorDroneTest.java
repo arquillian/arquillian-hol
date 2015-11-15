@@ -11,6 +11,7 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -33,6 +34,7 @@ import ch.open.arquillian.lab04.ui.web.BeerAdvisorPage;
  * @see BeerDetailsPage
  *
  */
+@Ignore
 @RunWith(Arquillian.class)
 public class BeerAdvisorDroneTest
 {
@@ -54,13 +56,6 @@ public class BeerAdvisorDroneTest
 
    @Drone
    WebDriver driver;
-
-   @Before
-   public void setup()
-   {
-      // make the driver more patient for our VM environments :)
-      driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-   }
 
    @Test
    public void should_find_all_beers()

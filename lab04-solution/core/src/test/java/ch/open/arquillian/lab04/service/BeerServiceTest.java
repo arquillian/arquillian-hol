@@ -29,7 +29,6 @@ public class BeerServiceTest
                        .addPackages(true, Beer.class.getPackage(), BeerRepository.class.getPackage())
                        .addClass(BeerService.class)
                        .addPackages(true, "org.fest")
-                       .addPackages(true, "com.google.common.base")
                        .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
                        .addAsManifestResource("test-persistence.xml", "persistence.xml");
    }

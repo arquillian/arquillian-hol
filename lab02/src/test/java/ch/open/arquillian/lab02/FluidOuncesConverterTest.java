@@ -2,8 +2,10 @@ package ch.open.arquillian.lab02;
 
 import static org.fest.assertions.Assertions.assertThat;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class FluidOuncesConverterTest {
 
     FluidOuncesConverter converter;

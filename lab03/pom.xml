@@ -4,31 +4,27 @@
   xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ch.open.arquillian</groupId>
+  <parent>
+    <groupId>org.arquillian.hol</groupId>
+    <artifactId>arquillian-hol-parent</artifactId>
+    <version>1.0.0.Alpha1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
   <artifactId>lab03</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <name>Arquillian HOL Lab03</name>
   <packaging>jar</packaging>
 
   <properties>
-    <version.maven_compiler>2.3.2</version.maven_compiler>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.build.timestamp.format>yyyyMMdd'T'HHmmss</maven.build.timestamp.format>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
-    <version.maven_surefire>2.12</version.maven_surefire>
-
-    <version.junit>4.8.2</version.junit>
     <version.fest_assert>1.4</version.fest_assert>
-    <version.arquillian_core>1.0.2.Final</version.arquillian_core>
-    <version.hsqldb>1.8.0.10</version.hsqldb>
   </properties>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.jboss.arquillian</groupId>
-        <artifactId>arquillian-bom</artifactId>
-        <version>${version.arquillian_core}</version>
+        <groupId>org.arquillian</groupId>
+        <artifactId>arquillian-universe</artifactId>
+        <version>${version.arquillian_universe}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -52,6 +48,14 @@
   <dependencies>
 
     <dependency>
+      <groupId>org.jboss.spec</groupId>
+      <artifactId>jboss-javaee-web-7.0</artifactId>
+      <version>${version.jboss_spec}</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
@@ -64,49 +68,19 @@
     </dependency>
 
     <dependency>
-      <groupId>org.jboss.arquillian.junit</groupId>
-      <artifactId>arquillian-junit-container</artifactId>
+      <groupId>org.arquillian.universe</groupId>
+      <artifactId>arquillian-junit</artifactId>
+      <type>pom</type>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.arquillian.universe</groupId>
+      <artifactId>arquillian-chameleon</artifactId>
+      <type>pom</type>
       <scope>test</scope>
     </dependency>
 
   </dependencies>
-  <profiles>
-    <profile>
-      <id>arq-glassfish-embedded-3</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <dependencies>
-        <dependency>
-          <groupId>org.jboss.arquillian.container</groupId>
-          <artifactId>arquillian-glassfish-embedded-3.1</artifactId>
-          <version>1.0.0.CR3</version>
-          <scope>test</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.glassfish.extras</groupId>
-          <artifactId>glassfish-embedded-all</artifactId>
-          <version>3.1.1</version>
-          <scope>provided</scope>
-        </dependency>
-        <dependency>
-          <groupId>hsqldb</groupId>
-          <artifactId>hsqldb</artifactId>
-          <version>${version.hsqldb}</version>
-          <scope>test</scope>
-        </dependency>
-      </dependencies>
-      <build>
-        <testResources>
-          <testResource>
-            <directory>src/test/resources</directory>
-          </testResource>
-          <testResource>
-            <directory>src/test/resources-glassfish-3</directory>
-          </testResource>
-        </testResources>
-      </build>
-    </profile>
 
-  </profiles>
 </project>

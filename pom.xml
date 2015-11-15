@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <!-- Model Information -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Artifact Information -->
+    <groupId>org.arquillian.hol</groupId>
+    <artifactId>arquillian-hol-parent</artifactId>
+    <version>1.0.0.Alpha1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Arquillian HOL Aggregator</name>
+    <url>http://arquillian.org</url>
+    <description>Arquillian Aggregator</description>
+
+    <properties>
+
+        <!-- jboss-parent override -->
+        <maven.compiler.argument.target>1.7</maven.compiler.argument.target>
+        <maven.compiler.argument.source>1.7</maven.compiler.argument.source>
+
+        <version.arquillian_universe>1.0.0.Alpha1</version.arquillian_universe>
+        <version.arquillian_core>1.1.10.Final</version.arquillian_core>
+        <version.arquillian_spock>1.0.0.Alpha2</version.arquillian_spock>
+        <version.junit>4.12</version.junit>
+        <version.jboss_spec>1.0.3.Final</version.jboss_spec>
+        
+        <version.fest_assert>1.4</version.fest_assert>
+        <version.guava>10.0.1</version.guava>
+        
+        <version.hibernate_jpamodelgen>1.2.0.Final</version.hibernate_jpamodelgen>
+        <version.hsqldb>1.8.0.10</version.hsqldb>
+                
+        <version.spock>0.5-groovy-1.8</version.spock>
+        <version.groovy>1.8.5</version.groovy>
+        <version.groovy.eclipse_compiler>2.6.0-01</version.groovy.eclipse_compiler>
+
+        <version.maven_war>2.6</version.maven_war>
+        <version.maven_compiler>3.3</version.maven_compiler>
+        <version.maven_surefire>2.19</version.maven_surefire>
+        <version.maven.build_helper_plugin>1.5</version.maven.build_helper_plugin>
+        <version.maven_processor>2.0.5</version.maven_processor>
+    
+    </properties>
+
+    <issueManagement>
+        <system>jira</system>
+        <url>http://jira.jboss.com/jira/browse/ARQ</url>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://git@github.com:arquillian/arquillian-core.git</connection>
+        <developerConnection>scm:git:ssh://github.com/arquillian/arquillian-core.git</developerConnection>
+        <url>git://github.com/arquillian/arquillian-core.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <modules>
+        
+        <module>lab02</module>
+        <module>lab02-solution</module>
+
+        <module>lab03</module>
+        <module>lab03-solution</module>
+
+        <module>lab04</module>
+        <module>lab04-solution</module>
+
+        <module>lab05</module>
+        <module>lab05-solution</module>
+
+        <module>lab06</module>
+        <module>lab06-solution</module>
+
+    </modules>
+
+  <repositories>
+    <repository>
+      <id>jboss-public-repository</id>
+      <name>JBoss Repository</name>
+      <url>http://repository.jboss.org/nexus/content/groups/public</url>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>${version.maven_war}</version>        
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${version.maven_compiler}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${version.maven_surefire}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>${version.maven.build_helper_plugin}</version>
+        </plugin>          
+        <plugin>
+          <groupId>org.bsc.maven</groupId>
+          <artifactId>maven-processor-plugin</artifactId>
+          <version>${version.maven_processor}</version>        
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <target>${maven.compiler.argument.target}</target>
+          <source>${maven.compiler.argument.source}</source>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

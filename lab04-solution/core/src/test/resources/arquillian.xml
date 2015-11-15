@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://jboss.org/schema/arquillian"
+  xsi:schemaLocation="http://jboss.org/schema/arquillian
+    http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+
+  <container qualifier="container" default="true">
+    <configuration>
+      <property name="chameleonTarget">wildfly:9.0.0.Final:managed</property>
+    </configuration>
+  </container>
+
+  <extension qualifier="transaction">
+    <property name="manager">java:jboss/UserTransaction</property>
+  </extension>
+
+  <extension qualifier="persistence">
+    <property name="defaultDataSource">java:jboss/datasources/ExampleDS</property>
+  </extension>
+
+  <extension qualifier="persistence-script">
+    <property name="scriptsToExecuteBeforeTest">SET REFERENTIAL_INTEGRITY FALSE</property>
+  </extension>
+
+  <extension qualifier="persistence-dbunit">
+    <property name="datatypeFactory">org.dbunit.ext.h2.H2DataTypeFactory</property>
+  </extension>
+
+</arquillian>

@@ -9,12 +9,14 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import ch.open.arquillian.lab03.FluidOuncesConverter;
 import ch.open.arquillian.lab03.FluidOuncesConverterBean;
 
+@Ignore
 @RunWith(Arquillian.class)
 public class FluidOuncesConverterTest {
 

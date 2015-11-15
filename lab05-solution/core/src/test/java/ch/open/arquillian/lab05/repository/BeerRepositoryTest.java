@@ -17,7 +17,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import ch.open.arquillian.lab05.domain.Beer;
-import ch.open.arquillian.lab05.repository.BeerRepository;
 
 @RunWith(Arquillian.class)
 public class BeerRepositoryTest

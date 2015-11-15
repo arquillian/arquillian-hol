@@ -6,42 +6,42 @@ import static org.junit.Assert.fail;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriverBackedSelenium;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-import com.thoughtworks.selenium.Selenium;
 
 public class BeerAdvisorSeleniumTest {
 
-    private Selenium selenium;
-
+    private final String BASE_URL = "http://beeradvisor.bartoszmajsak.com";
+    private WebDriver selenium;
+    
     @Before
     public void setUp() throws Exception {
-        String baseUrl = "http://beeradvisor.bartoszmajsak.com";
-        selenium = new WebDriverBackedSelenium(new FirefoxDriver(), baseUrl);
+        selenium = new FirefoxDriver();
     }
 
     @Test
     public void should_find_all_beers() throws Exception {
-        selenium.open("/search.xhtml");
-        selenium.type("id=advisor:beerSearch", "all");
-        selenium.keyPress("id=advisor:beerSearch", "\\13");
+        selenium.get(BASE_URL + "/search.xhtml");
+        selenium.findElement(By.id("advisor:beerSearch")).sendKeys("all", Keys.RETURN);
+        
         for (int second = 0;; second++) {
             if (second >= 60)
                 fail("timeout");
             try {
-                if (selenium.isElementPresent("//table[@id='beer-results-table']/tbody/tr"))
+                if (selenium.findElement(By.xpath("//table[@id='beer-results-table']/tbody/tr"))!= null)
                     break;
             } catch (Exception e) {
             }
             Thread.sleep(1000);
         }
 
-        assertEquals(7, selenium.getXpathCount("//table[@id='beer-results-table']/tbody/tr"));
+        assertEquals(7, selenium.findElements(By.xpath("//table[@id='beer-results-table']/tbody/tr")).size());
     }
 
     @After
     public void tearDown() throws Exception {
-        selenium.stop();
+        selenium.close();
     }
 }

@@ -6,24 +6,22 @@
 
   <parent>
     <groupId>ch.open.arquillian</groupId>
-		<artifactId>lab05-solution</artifactId>
+    <artifactId>lab05-solution</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>lab05-solution-core</artifactId>
-
-  <properties>
-    <version.maven_compiler>2.3.2</version.maven_compiler>
-    <version.hibernate_jpamodelgen>1.2.0.Final</version.hibernate_jpamodelgen>
-    <version.hsqldb>1.8.0.10</version.hsqldb>
-    <version.arquillian_persistence>1.0.0.Alpha5</version.arquillian_persistence>
-  </properties>
+  <name>Arquillian HOL Lab05 Solution Core</name>
 
   <dependencies>
 
     <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
+      <groupId>org.jboss.spec</groupId>
+      <artifactId>jboss-javaee-web-7.0</artifactId>
+      <version>${version.jboss_spec}</version>
+      <type>pom</type>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -39,31 +37,30 @@
     </dependency>
 
     <dependency>
-      <groupId>org.jboss.arquillian.junit</groupId>
-      <artifactId>arquillian-junit-container</artifactId>
+      <groupId>org.arquillian.universe</groupId>
+      <artifactId>arquillian-junit</artifactId>
       <scope>test</scope>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.arquillian.universe</groupId>
+      <artifactId>arquillian-persistence</artifactId>
+      <scope>test</scope>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.arquillian.universe</groupId>
+      <artifactId>arquillian-chameleon</artifactId>
+      <scope>test</scope>
+      <type>pom</type>
     </dependency>
 
-    <dependency>
-      <groupId>org.jboss.arquillian.extension</groupId>
-      <artifactId>arquillian-persistence-api</artifactId>
-      <version>${version.arquillian_persistence}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.jboss.arquillian.extension</groupId>
-      <artifactId>arquillian-persistence-impl</artifactId>
-      <version>${version.arquillian_persistence}</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
   <build>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>${version.maven_compiler}</version>
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
@@ -73,7 +70,6 @@
       <plugin>
         <groupId>org.bsc.maven</groupId>
         <artifactId>maven-processor-plugin</artifactId>
-        <version>2.0.5</version>
         <executions>
           <execution>
             <id>process</id>
@@ -106,7 +102,6 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>1.7</version>
         <executions>
           <execution>
             <id>add-source</id>
