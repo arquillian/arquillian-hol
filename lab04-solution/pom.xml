@@ -13,9 +13,7 @@
   </parent>
 
   <!-- Artifact Configuration -->
-  <groupId>ch.open.arquillian</groupId>
   <artifactId>lab04-solution</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
   <name>Arquillian HOL Lab04 Solution</name>
   <packaging>pom</packaging>
 

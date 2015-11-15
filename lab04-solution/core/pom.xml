@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>ch.open.arquillian</groupId>
+    <groupId>org.arquillian.hol</groupId>
 	<artifactId>lab04-solution</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0.Alpha1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 

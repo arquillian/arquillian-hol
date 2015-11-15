@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <!-- Model Version -->
   <modelVersion>4.0.0</modelVersion>
   
   <parent>
@@ -12,10 +11,7 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <!-- Artifact Configuration -->
-  <groupId>ch.open.arquillian</groupId>
   <artifactId>lab05</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
   <name>Arquillian HOL Lab05</name>
   <packaging>pom</packaging>
 

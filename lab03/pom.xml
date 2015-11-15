@@ -15,10 +15,6 @@
   <name>Arquillian HOL Lab03</name>
   <packaging>jar</packaging>
 
-  <properties>
-    <version.fest_assert>1.4</version.fest_assert>
-  </properties>
-
   <dependencyManagement>
     <dependencies>
       <dependency>

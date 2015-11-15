@@ -12,10 +12,7 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <!-- Artifact Configuration -->
-  <groupId>ch.open.arquillian</groupId>
   <artifactId>lab05-solution</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
   <name>Arquillian HOL Lab05 Solution</name>
   <packaging>pom</packaging>
 
