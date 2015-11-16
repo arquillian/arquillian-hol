@@ -18,7 +18,7 @@ During this workshop you will learn how to leverage the [Arquillian](http://arqu
 * writing your tests in a clean, narrative way by applying a Behaviour Driven Development approach
 * testing your application components such as EJBs, REST web services, CDI or Spring beans using Arquillian and its extensions
 * effectively testing your persistence code using the Arquillian Persistence Extension
-* testing the entire web application from the end user perspective using WebDriver and the Page Objects pattern combined with Arquillian Drone and Arquillian Graphene which makes development of functional tests using Selenium/WebDriver a breeze.
+* testing the entire web application from the end user perspective using WebDriver and the Page Objects pattern combined with Arquillian Drone which makes development of functional tests using Selenium/WebDriver a breeze.
 
 But what’s more important, how to keep you focused on writing the tests and not worrying about all the burden and boilerplate around. No more custom scripts or copy-paste Maven configurations. No more full builds. Regardless of how complex it becomes, executing an Arquillian test is as simple as selecting “Run Test” in the IDE or executing the “test” goal from the build tool.
 
