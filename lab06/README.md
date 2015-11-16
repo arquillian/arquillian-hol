@@ -48,5 +48,5 @@ The goal is to finish the provided extension skeleton and log messages specified
 
 All you need to do is:
 * Implement the observer which will extract information from the test method and log it (similar @Observes annotation and concept like in CDI).
-* Register it as a part of the [`PromptRemoteExtension`](https://github.com/ctpconsulting/chopen-workshop-arquillian/blob/master/lab06/src/main/java/ch/open/arquillian/lab06/container/PromptRemoteExtension.java)
-* [Prepare extension deployment](https://github.com/ctpconsulting/chopen-workshop-arquillian/blob/master/lab06/src/main/java/ch/open/arquillian/lab06/client/PromptExtensionArchiveCreator.java) by adding all classes required at runtime.
+* Register it as a part of the [`PromptRemoteExtension`](https://github.com/arquillian/arquillian-hol/blob/master/lab06/src/main/java/org/arquillian/hol/lab06/container/PromptRemoteExtension.java)
+* [Prepare extension deployment](https://github.com/arquillian/arquillian-hol/blob/master/lab06/src/main/java/org/arquillian/hol/lab06/client/PromptExtensionArchiveCreator.java) by adding all classes required at runtime.

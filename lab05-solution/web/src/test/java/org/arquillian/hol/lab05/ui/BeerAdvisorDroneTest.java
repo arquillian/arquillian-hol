@@ -1,6 +1,7 @@
 
 package org.arquillian.hol.lab05.ui;
 
+import java.math.BigDecimal;
 import java.net.URL;
 import java.util.List;
 
@@ -14,6 +15,7 @@ import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -66,4 +68,19 @@ public class BeerAdvisorDroneTest
       BeersAssert.assertThat(beers).hasSize(7);
    }
 
+   @Test
+   public void should_find_details_of_a_beer()
+   {
+       // given
+       BeerAdvisorPage beerAdvisor = new BeerAdvisorPage(driver, deploymentUrl.toString());
+
+       // when
+       Beer endOfHistory = beerAdvisor.detailsOf("End of history");
+
+       // then
+       Assert.assertEquals("End of history", endOfHistory.getName());
+       Assert.assertEquals(765, endOfHistory.getPrice().intValue());
+       Assert.assertEquals("Brew Dog", endOfHistory.getBrewery());
+       Assert.assertEquals(55, endOfHistory.getAlcohol().intValue());
+   }
 }

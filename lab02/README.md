@@ -12,7 +12,7 @@ During this lab you will learn:
 
 ### Task
 
-First step is to fix the failing test [`ch.open.arquillian.lab02.FluidOuncesConverterTest`](https://github.com/ctpconsulting/chopen-workshop-arquillian/blob/master/lab02/src/test/java/ch/open/arquillian/lab02/FluidOuncesConverterTest.java) by implementing following interface with the logic for converting fluid ounces to millliliters
+First step is to fix the failing test [`ch.open.arquillian.lab02.FluidOuncesConverterTest`](https://github.com/arquillian/arquillian-hol/blob/master/lab02/src/test/java/org/arquillian/hol/lab02/FluidOuncesConverterTest.java) by implementing following interface with the logic for converting fluid ounces to millliliters
 
     public interface FluidOuncesConverter {
 
@@ -20,10 +20,10 @@ First step is to fix the failing test [`ch.open.arquillian.lab02.FluidOuncesConv
 
 	}
 
-Next step is to make it an `@EJB` component and test in Glassfish 3.1 Embedded (already pre-configured in `pom.xml`). This will require following steps
+Next step is to make it an `@EJB` component and test in WildFly 9.0.0.Final (already pre-configured in `pom.xml` and `arquillian.xml`). This will require following steps
 * Enhance our test to be Arquillian powered.
 * Define a deployment package programmatically using **ShrinkWrap**
 * Run the test from the command line using `mvn clean package`
 * Run it directly from the IDE
 
-The solution is available [here](https://github.com/ctpconsulting/chopen-workshop-arquillian/tree/master/lab02-solution).
+The solution is available [here](https://github.com/arquillian/arquillian-hol/tree/master/lab02-solution).
