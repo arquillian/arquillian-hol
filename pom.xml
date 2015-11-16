@@ -132,5 +132,26 @@
       </plugin>
     </plugins>
   </build>
-
+  
+<!-- mvn package -DskipTests -Dmaven.repo.local=repo -->
+<!--
+  <dependencies>
+    <dependency>
+        <groupId>org.wildfly.arquillian</groupId>
+        <artifactId>wildfly-arquillian-container-remote</artifactId>
+        <version>1.0.0.Final</version>
+    </dependency>
+    <dependency>
+        <groupId>org.wildfly.arquillian</groupId>
+        <artifactId>wildfly-arquillian-container-managed</artifactId>
+        <version>1.0.0.Final</version>
+    </dependency>
+    <dependency>
+        <groupId>org.wildfly</groupId>
+        <artifactId>wildfly-dist</artifactId>
+        <version>9.0.0.Final</version>
+        <type>zip</type>
+    </dependency>
+  </dependencies>
+-->
 </project>
