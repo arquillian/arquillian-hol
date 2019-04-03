@@ -26,7 +26,7 @@
         <version.jboss_spec>1.0.3.Final</version.jboss_spec>
         
         <version.fest_assert>1.4</version.fest_assert>
-        <version.guava>10.0.1</version.guava>
+        <version.guava>20.0-hal</version.guava>
         
         <version.hibernate_jpamodelgen>1.2.0.Final</version.hibernate_jpamodelgen>
         <version.hsqldb>1.8.0.10</version.hsqldb>
