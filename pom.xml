@@ -19,7 +19,7 @@
         <maven.compiler.argument.target>1.7</maven.compiler.argument.target>
         <maven.compiler.argument.source>1.7</maven.compiler.argument.source>
 
-        <version.arquillian_universe>1.0.0.Alpha1</version.arquillian_universe>
+        <version.arquillian_universe>1.5.0.0</version.arquillian_universe>
         <version.arquillian_core>1.1.10.Final</version.arquillian_core>
         <version.arquillian_spock>1.0.0.Alpha2</version.arquillian_spock>
         <version.junit>4.12</version.junit>
