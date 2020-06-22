@@ -38,7 +38,7 @@
         <version.maven_war>2.6</version.maven_war>
         <version.maven_compiler>3.3</version.maven_compiler>
         <version.maven_surefire>2.19</version.maven_surefire>
-        <version.maven.build_helper_plugin>1.5</version.maven.build_helper_plugin>
+        <version.maven.build_helper_plugin>3.2.0</version.maven.build_helper_plugin>
         <version.maven_processor>2.0.5</version.maven_processor>
     
     </properties>
