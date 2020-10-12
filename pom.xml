@@ -22,7 +22,7 @@
         <version.arquillian_universe>1.0.0.Alpha1</version.arquillian_universe>
         <version.arquillian_core>1.1.10.Final</version.arquillian_core>
         <version.arquillian_spock>1.0.0.Alpha2</version.arquillian_spock>
-        <version.junit>4.12</version.junit>
+        <version.junit>4.13.1</version.junit>
         <version.jboss_spec>1.0.3.Final</version.jboss_spec>
         
         <version.fest_assert>1.4</version.fest_assert>
